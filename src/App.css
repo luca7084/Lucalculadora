@@ -1,0 +1,179 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color:gray;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+header {
+  text-align: center;
+}
+
+.App {
+  padding: 25px;
+  box-shadow: 0 0 40px 0 black;
+  justify-content: center;
+  align-items: center;
+}
+
+.mostra-atual {
+  height: 40px;
+  width: 250px;
+  padding-right: 3px;
+  background-color: green;
+  text-align: right;
+  font-size: 28px;
+}
+
+.mostra-antigo {
+  height: 32px;
+  width: 250px;
+  padding-right: 3px;
+  background-color: green;
+  text-align: right;
+  font-size: 24px;
+}
+
+
+.b-num,
+.b-lim,
+.b-apa,
+.b-vir,
+.b-ope,
+.b-igu {
+  display: block;
+  height: 63px;
+  width: 60px;
+  border: 1px solid black;
+  font-size: 22px;
+}
+
+.b-num {
+  background-color: black;
+  color: white;
+}
+
+.b-vir,
+.b-igu,
+.b-lim,
+.b-apa {
+  background-color: darkslategrey;
+  color: white;
+}
+
+
+.b-ope {
+  background-color: red;
+  color: black;
+}
+
+.b-num:hover,
+.b-lim:hover,
+.b-apa:hover,
+.b-vir:hover,
+.b-ope:hover,
+.b-igu:hover {
+  border-color:yellow;
+}
+
+.b-num:focus,
+.b-lim:focus,
+.b-apa:focus,
+.b-vir:focus,
+.b-ope:focus,
+.b-igu:focus {
+  outline: none;
+}
+
+
+.butts {
+  display: grid;
+  padding-top: 10px;
+  grid-template-columns: repeat(4, 65px);
+  grid-template-rows: repeat(5, 75px);
+  align-items: center;
+  grid-template-areas:
+    "soma subtracao multiplicacao divisao"
+    "limpar apagar igual igual"
+    "sept huit neuf virgula"
+    "quatre cinq six zero"
+    "un deux trois zero";
+}
+
+#limpar {
+  grid-area: limpar;
+}
+
+#apagar {
+  grid-area: apagar;
+}
+
+#multiplicacao {
+  grid-area: multiplicacao;
+}
+
+#divisao {
+  grid-area: divisao;
+}
+
+#sept {
+  grid-area: sept;
+}
+
+#huit {
+  grid-area: huit;
+}
+
+#neuf {
+  grid-area: neuf;
+}
+
+#subtracao {
+  grid-area: subtracao;
+}
+
+#quatre {
+  grid-area: quatre;
+}
+
+#cinq {
+  grid-area: cinq;
+}
+
+#six {
+  grid-area: six;
+}
+
+#soma {
+  grid-area: soma;
+}
+
+#un {
+  grid-area: un;
+}
+
+#deux {
+  grid-area: deux;
+}
+
+#trois {
+  grid-area: trois;
+}
+
+#zero {
+  grid-area: zero;
+  height: 136px;
+}
+
+#virgula {
+  grid-area: virgula;
+}
+
+#igual {
+  grid-area: igual;
+  width: 125px;
+}
+
+
