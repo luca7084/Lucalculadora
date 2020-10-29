@@ -1,10 +1,14 @@
 body {
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   background-color:gray;
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+h2 {
+  text-align: center;
 }
 
 header {
@@ -18,6 +22,11 @@ header {
   align-items: center;
 }
 
+.corpo {
+  display: flex;
+}
+
+
 .mostra-atual {
   height: 40px;
   width: 250px;
@@ -25,6 +34,7 @@ header {
   background-color: green;
   text-align: right;
   font-size: 28px;
+  overflow-x: hidden;
 }
 
 .mostra-antigo {
@@ -34,6 +44,7 @@ header {
   background-color: green;
   text-align: right;
   font-size: 24px;
+  overflow-x: hidden;
 }
 
 
@@ -42,7 +53,11 @@ header {
 .b-apa,
 .b-vir,
 .b-ope,
-.b-igu {
+.b-igu,
+.b-limM,
+.b-ultM,
+.b-somM,
+.b-salM {
   display: block;
   height: 63px;
   width: 60px;
@@ -69,12 +84,23 @@ header {
   color: black;
 }
 
+.b-limM,
+.b-ultM,
+.b-somM,
+.b-salM {
+  background-color: blueviolet;
+}
+
 .b-num:hover,
 .b-lim:hover,
 .b-apa:hover,
 .b-vir:hover,
 .b-ope:hover,
-.b-igu:hover {
+.b-igu:hover,
+.b-limM:hover,
+.b-ultM:hover,
+.b-somM:hover,
+.b-salM:hover {
   border-color:yellow;
 }
 
@@ -83,23 +109,83 @@ header {
 .b-apa:focus,
 .b-vir:focus,
 .b-ope:focus,
-.b-igu:focus {
+.b-igu:focus,
+.b-limM:focus,
+.b-ultM:focus,
+.b-somM:focus,
+.b-salM:focus {
   outline: none;
 }
 
+table {
+  float: right;
+}
+
+
+.armazenamento {
+  height: 425px;
+  width: 300px;
+  justify-content: right;
+  overflow-y: scroll;
+}
+
+.tabela-display {
+  height: 12px;
+  width: 200px;
+  background-color: darkblue;
+  color: white;
+  text-align: right;
+  padding-right: 5px;
+  font-size: 17px;
+}
+
+table .b-apaM,
+table .b-recM {
+  height: 30px;
+  color: black;
+  background-color: blueviolet;
+  font-size: 14px;
+}
+
+table .b-apaM:hover,
+table .b-recM:hover {
+  border-color: yellow;
+}
+
+table .b-apaM:focus,
+table .b-recM:focus {
+  outline: none;
+}
 
 .butts {
   display: grid;
   padding-top: 10px;
   grid-template-columns: repeat(4, 65px);
-  grid-template-rows: repeat(5, 75px);
+  grid-template-rows: repeat(6, 75px);
   align-items: center;
   grid-template-areas:
+    "lim ult som sal"
     "soma subtracao multiplicacao divisao"
     "limpar apagar igual igual"
     "sept huit neuf virgula"
     "quatre cinq six zero"
     "un deux trois zero";
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: darkslategrey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: blue;
+}
+::-webkit-scrollbar-thumb:active {
+  background: orange;
 }
 
 #limpar {
@@ -164,7 +250,7 @@ header {
 
 #zero {
   grid-area: zero;
-  height: 136px;
+  height: 138px;
 }
 
 #virgula {
@@ -176,4 +262,18 @@ header {
   width: 125px;
 }
 
+#lim {
+  grid-area: lim;
+}
 
+#ult {
+  grid-area: ult;
+}
+
+#som {
+  grid-area: som;
+}
+
+#sal {
+  grid-area: sal;
+}
